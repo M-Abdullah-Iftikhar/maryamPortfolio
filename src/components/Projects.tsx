@@ -14,7 +14,7 @@ export function Projects() {
       title="Projects I've built."
       subtitle="A curated selection of projects across web, AI, and security. Each one is a story of learning something new and shipping it."
     >
-      <div className="grid gap-8">
+      <div className="flex flex-col gap-8">
         {projects.map((p, i) => (
           <ProjectCard key={p.slug} project={p} reverse={i % 2 === 1} />
         ))}
@@ -28,8 +28,8 @@ function ProjectCard({ project, reverse }: { project: Project; reverse: boolean 
   const hasImages = project.images.length > 0;
 
   return (
-    <article className="card p-6 md:p-8 grid md:grid-cols-2 gap-8 items-center">
-      <div className={reverse ? "md:order-2" : ""}>
+    <article className="card p-5 sm:p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
+      <div className={`min-w-0 ${reverse ? "md:order-2" : ""}`}>
         {hasImages ? (
           <div className="space-y-3">
             <div className="relative aspect-video rounded-xl overflow-hidden border border-token bg-surface">
@@ -65,7 +65,7 @@ function ProjectCard({ project, reverse }: { project: Project; reverse: boolean 
         )}
       </div>
 
-      <div className={reverse ? "md:order-1" : ""}>
+      <div className={`min-w-0 ${reverse ? "md:order-1" : ""}`}>
         {project.featured && (
           <span className="inline-block text-xs font-semibold uppercase tracking-wider text-accent mb-2">
             ★ Featured

@@ -17,7 +17,7 @@ export function Contact() {
       title="Get in touch"
       subtitle="I'm open to internships, junior developer roles, and interesting collaborations. Drop me a line — I'd love to hear from you."
     >
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <a
           href={`mailto:${profile.email}`}
           className="card p-6 flex items-start gap-4 group"
@@ -25,7 +25,7 @@ export function Contact() {
           <div className="h-12 w-12 rounded-full bg-accent/10 text-accent flex items-center justify-center flex-none">
             <MailIcon className="h-5 w-5" />
           </div>
-          <div className="flex-1">
+          <div className="flex-1 min-w-0">
             <div className="text-xs uppercase tracking-wider text-muted">Email</div>
             <div className="text-base font-semibold break-all">{profile.email}</div>
           </div>
@@ -39,7 +39,7 @@ export function Contact() {
           <div className="h-12 w-12 rounded-full bg-accent/10 text-accent flex items-center justify-center flex-none">
             <PhoneIcon className="h-5 w-5" />
           </div>
-          <div className="flex-1">
+          <div className="flex-1 min-w-0">
             <div className="text-xs uppercase tracking-wider text-muted">Phone</div>
             <div className="text-base font-semibold">{profile.phone}</div>
           </div>
@@ -55,7 +55,7 @@ export function Contact() {
           <div className="h-12 w-12 rounded-full bg-accent/10 text-accent flex items-center justify-center flex-none">
             <GithubIcon className="h-5 w-5" />
           </div>
-          <div className="flex-1">
+          <div className="flex-1 min-w-0">
             <div className="text-xs uppercase tracking-wider text-muted">GitHub</div>
             <div className="text-base font-semibold">@maryammueen</div>
           </div>
@@ -71,7 +71,7 @@ export function Contact() {
           <div className="h-12 w-12 rounded-full bg-accent/10 text-accent flex items-center justify-center flex-none">
             <LinkedinIcon className="h-5 w-5" />
           </div>
-          <div className="flex-1">
+          <div className="flex-1 min-w-0">
             <div className="text-xs uppercase tracking-wider text-muted">LinkedIn</div>
             <div className="text-base font-semibold">Maryam Mueen</div>
           </div>

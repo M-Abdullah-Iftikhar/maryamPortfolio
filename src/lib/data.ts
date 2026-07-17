@@ -159,28 +159,70 @@ export const projects: Project[] = [
   },
 ];
 
-export const experience = [
+export type ExperienceItem = {
+  role: "Developer" | "Teaching" | "Cybersecurity" | "Networking";
+  title: string;
+  company: string;
+  location: string;
+  period: string;
+  isCurrent?: boolean;
+  points: string[];
+  stack: string[];
+};
+
+export const experience: ExperienceItem[] = [
   {
-    role: "Junior Website Developer",
-    company: "ppcfly.pk",
-    location: "Lahore, Pakistan",
-    period: "June 2025 – August 2025",
+    role: "Networking",
+    title: "Networking Assistant Intern",
+    company: "H-Tech",
+    location: "IT Department · Lahore, Pakistan",
+    period: "Jul 2026 – Present",
+    isCurrent: true,
     points: [
-      "Built and shipped web applications using Django.",
-      "Deployed multiple application stacks to Vercel and AWS.",
-      "Gained hands-on experience with the full deploy pipeline — from local dev to production.",
+      "Supporting the IT department with day-to-day networking operations.",
+      "Assisting with router / switch configuration, patching, and connectivity troubleshooting.",
+      "Documenting network topology and internal IT procedures.",
     ],
+    stack: ["Networking", "IT Support", "Routing", "Switching", "Troubleshooting"],
   },
   {
-    role: "Teaching Assistant",
+    role: "Cybersecurity",
+    title: "Cybersecurity Intern",
+    company: "Developers Hub",
+    location: "Remote · Pakistan",
+    period: "Feb 2026 – May 2026",
+    points: [
+      "Explored offensive and defensive security through hands-on labs and CTF-style tasks.",
+      "Practiced vulnerability assessment, threat modeling, and secure-coding review.",
+      "Wrote up findings and remediation notes for internal knowledge sharing.",
+    ],
+    stack: ["Cybersecurity", "Pen Testing", "Python", "Linux", "OWASP"],
+  },
+  {
+    role: "Developer",
+    title: "Junior Website Developer",
+    company: "ppcfly.pk",
+    location: "Lahore, Pakistan",
+    period: "Jun 2025 – Aug 2025",
+    points: [
+      "Built and shipped production web applications using Django.",
+      "Deployed multi-service stacks to Vercel and AWS.",
+      "Owned the full pipeline — local dev, staging, and production releases.",
+    ],
+    stack: ["Django", "Python", "AWS", "Vercel", "PostgreSQL"],
+  },
+  {
+    role: "Teaching",
+    title: "Teaching Assistant",
     company: "Department of Computer Science, UET Lahore",
     location: "Lahore, Pakistan",
-    period: "September 2023 – May 2024",
+    period: "Sep 2023 – May 2024",
     points: [
-      "TA for Object Oriented Programming (OOP) & Programming Fundamentals under Mr. Laiq uz Zaman Khan Niazi.",
+      "TA for Object Oriented Programming & Programming Fundamentals under Mr. Laiq uz Zaman Khan Niazi.",
       "TA for Information Security under Ms. Ayesha Altaf.",
-      "Mentored students on programming assignments, debugging, and core CS concepts.",
+      "Mentored students on assignments, debugging, and core CS concepts.",
     ],
+    stack: ["C++", "Python", "OOP", "Info Security"],
   },
 ];
 
@@ -188,4 +230,32 @@ export const education = {
   degree: "Bachelor of Computer Science",
   school: "University of Engineering and Technology (UET), Lahore",
   period: "2022 – 2026",
+  status: "Final Year",
+  focusAreas: [
+    "Software Engineering",
+    "AI / Machine Learning",
+    "Information Security",
+    "Data Structures & Algorithms",
+    "Databases",
+    "Web Development",
+  ],
+  coursework: [
+    "Object Oriented Programming",
+    "Data Structures",
+    "Software Engineering",
+    "Operating Systems",
+    "Databases",
+    "Machine Learning",
+    "Information Security",
+    "Computer Networks",
+  ],
+};
+
+export const whoAmI = {
+  quickFacts: [
+    { label: "Based in", value: "Lahore, Pakistan" },
+    { label: "Studying", value: "CS @ UET Lahore" },
+    { label: "Graduating", value: "2026" },
+    { label: "Focus", value: "Django · AI · Web" },
+  ],
 };

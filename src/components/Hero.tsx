@@ -1,10 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { profile } from "@/lib/data";
 import {
   ArrowRightIcon,
   DownloadIcon,
+  EyeIcon,
   GithubIcon,
   LinkedinIcon,
   LocationIcon,
@@ -13,18 +15,18 @@ import { RotatingText } from "./RotatingText";
 
 export function Hero() {
   return (
-    <section id="top" className="relative pt-32 pb-24 subtle-bg overflow-hidden">
-      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-[1.4fr_1fr] gap-12 items-center">
-        <div className="animate-fade-up">
+    <section id="top" className="relative pt-28 md:pt-32 pb-16 md:pb-24 subtle-bg overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-10 md:gap-12 items-center">
+        <div className="animate-fade-up min-w-0">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-token bg-elev text-xs text-muted mb-6">
             <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
             {profile.availability}
           </div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05]">
-            Hi, I&apos;m <span className="text-accent">Maryam</span>.
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05]">
+            Hi, I&apos;m <span className="text-accent">Maryam Mueen</span>.
           </h1>
-          <h2 className="mt-4 text-xl md:text-2xl text-muted font-medium flex flex-wrap items-baseline gap-x-2">
+          <h2 className="mt-4 text-lg sm:text-xl md:text-2xl text-muted font-medium flex flex-wrap items-baseline gap-x-2">
             <span>I&apos;m a</span>
             <RotatingText />
           </h2>
@@ -47,14 +49,24 @@ export function Hero() {
               View My Work
               <ArrowRightIcon className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a
-              href={profile.resumeUrl}
-              download
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-token bg-elev font-medium hover:border-accent transition-all"
-            >
-              <DownloadIcon className="h-4 w-4" />
-              Download Resume
-            </a>
+            <div className="inline-flex items-stretch rounded-full border border-token bg-elev overflow-hidden font-medium hover:border-accent transition-colors">
+              <Link
+                href="/resume"
+                className="inline-flex items-center gap-2 pl-5 pr-4 py-3 hover:text-accent transition-colors"
+              >
+                <EyeIcon className="h-4 w-4" />
+                View Resume
+              </Link>
+              <a
+                href={profile.resumeUrl}
+                download
+                aria-label="Download resume PDF"
+                title="Download PDF"
+                className="inline-flex items-center px-4 border-l border-token text-muted hover:text-white hover:bg-accent transition-colors"
+              >
+                <DownloadIcon className="h-4 w-4" />
+              </a>
+            </div>
           </div>
 
           <div className="mt-8 flex items-center gap-4">
@@ -82,7 +94,7 @@ export function Hero() {
         <div className="relative flex justify-center md:justify-end animate-fade-in">
           <div className="relative">
             <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-brand-500/40 via-pink-500/30 to-blue-500/30 blur-2xl animate-float" />
-            <div className="relative h-64 w-64 md:h-80 md:w-80 rounded-full overflow-hidden border-4 border-token bg-elev">
+            <div className="relative h-52 w-52 sm:h-64 sm:w-64 md:h-80 md:w-80 rounded-full overflow-hidden border-4 border-token bg-elev">
               <PhotoPlaceholder />
             </div>
             <div className="absolute -bottom-4 -right-4 px-4 py-2 rounded-full glass border border-token text-xs font-semibold shadow-lg">
