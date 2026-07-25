@@ -18,7 +18,7 @@ export function Hero() {
   return (
     <section id="top" className="relative pt-28 md:pt-32 pb-16 md:pb-24 subtle-bg overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-10 md:gap-12 items-center">
-        <div className="animate-fade-up min-w-0">
+        <div className="animate-fade-up min-w-0 order-2 md:order-1">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-token bg-elev text-xs text-muted mb-6">
             <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
             {profile.availability}
@@ -92,7 +92,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative flex justify-center md:justify-end animate-fade-in">
+        <div className="relative flex justify-center md:justify-end animate-fade-in order-1 md:order-2">
           <div
             className="flex flex-col items-stretch"
             style={{ width: "clamp(260px, 30vw, 380px)" }}
