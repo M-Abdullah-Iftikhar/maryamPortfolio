@@ -1,4 +1,5 @@
-import { about, whoAmI } from "@/lib/data";
+import Image from "next/image";
+import { about, profile, whoAmI } from "@/lib/data";
 import { Section } from "./Section";
 
 export function WhoAmI() {
@@ -70,22 +71,13 @@ function PhotoPanel() {
     <div className="relative">
       <div className="absolute -inset-2 rounded-2xl border border-accent/30 -rotate-2" />
       <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden border border-token bg-elev">
-        <div className="h-full w-full flex flex-col items-center justify-center gap-2 text-muted">
-          <svg
-            className="h-14 w-14 opacity-30"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-          >
-            <rect x="3" y="3" width="18" height="18" rx="2" />
-            <circle cx="12" cy="10" r="3" />
-            <path d="M4.5 20a7.5 7.5 0 0 1 15 0" />
-          </svg>
-          <span className="text-xs uppercase tracking-wider">
-            Photo coming soon
-          </span>
-        </div>
+        <Image
+          src={profile.photoAbout}
+          alt="Maryam Mueen"
+          fill
+          sizes="(max-width: 768px) 100vw, 40vw"
+          className="object-cover"
+        />
       </div>
       <div className="absolute -bottom-3 left-4 right-4 rounded-lg bg-elev border border-token px-4 py-2 flex items-center justify-between shadow-lg">
         <span className="text-xs text-muted">Maryam Mueen</span>

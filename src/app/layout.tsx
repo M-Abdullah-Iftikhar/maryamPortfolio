@@ -8,7 +8,7 @@ import { ScrollProgress } from "@/components/ScrollProgress";
 export const metadata: Metadata = {
   title: "Maryam Mueen — Computer Scientist",
   description:
-    "Portfolio of Maryam Mueen — Final-year Computer Science student at UET Lahore. Building AI-powered web experiences with Django, Python, and modern cloud stacks.",
+    "Portfolio of Maryam Mueen — Computer Science graduate from UET Lahore. Building AI-powered web experiences with Django, Python, and modern cloud stacks.",
   keywords: [
     "Maryam Mueen",
     "Portfolio",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Maryam Mueen — Computer Scientist",
     description:
-      "Final-year CS student at UET Lahore. Django, Python, AI, and cloud.",
+      "CS graduate from UET Lahore. Django, Python, AI, and cloud.",
     type: "website",
   },
 };

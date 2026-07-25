@@ -12,7 +12,7 @@ import { PrintButton } from "@/components/PrintButton";
 export const metadata: Metadata = {
   title: "Resume — Maryam Mueen",
   description:
-    "Resume of Maryam Mueen — Computer Scientist, final-year CS student at UET Lahore.",
+    "Resume of Maryam Mueen — Computer Science graduate from UET Lahore.",
 };
 
 export default function ResumePage() {
@@ -49,12 +49,13 @@ export default function ResumePage() {
           <ResumeHeader />
           <ResumeSection title="Summary">
             <p className="text-[13.5px] leading-relaxed">
-              Final-year Computer Science student at UET Lahore with strong
-              programming and problem-solving skills. Proficient in C++, Python,
-              C#, Django, and Flask, with experience in databases, automation,
-              and cloud technologies. Passionate about AI and aspiring to build
-              a career in software Development. A quick learner and team
-              player, eager to take on challenging projects.
+              Computer Science graduate from UET Lahore with hands-on
+              experience building and shipping full-stack applications in
+              Django and Python. Skilled across web development, AI/ML, and
+              cloud deployment (AWS, Vercel), with additional exposure to
+              cybersecurity and IT networking through recent internships.
+              Passionate about AI and eager to grow as a software engineer — a
+              quick learner, strong problem-solver, and reliable team player.
             </p>
           </ResumeSection>
 

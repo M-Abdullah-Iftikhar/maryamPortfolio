@@ -8,6 +8,7 @@ import {
   DownloadIcon,
   EyeIcon,
   GithubIcon,
+  GraduationIcon,
   LinkedinIcon,
   LocationIcon,
 } from "./Icons";
@@ -32,7 +33,7 @@ export function Hero() {
           </h2>
 
           <p className="mt-6 text-base md:text-lg text-muted max-w-xl leading-relaxed">
-            {profile.tagline} Final-year CS student at UET Lahore, passionate about
+            {profile.tagline} Recent CS graduate from UET Lahore, passionate about
             AI, web development, and shipping real products.
           </p>
 
@@ -92,13 +93,39 @@ export function Hero() {
         </div>
 
         <div className="relative flex justify-center md:justify-end animate-fade-in">
-          <div className="relative">
-            <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-brand-500/40 via-pink-500/30 to-blue-500/30 blur-2xl animate-float" />
-            <div className="relative h-52 w-52 sm:h-64 sm:w-64 md:h-80 md:w-80 rounded-full overflow-hidden border-4 border-token bg-elev">
-              <PhotoPlaceholder />
+          <div
+            className="flex flex-col items-stretch"
+            style={{ width: "clamp(260px, 30vw, 380px)" }}
+          >
+            <div
+              className="relative"
+              style={{ aspectRatio: "776 / 1080" }}
+            >
+              <Image
+                src={profile.photoHero}
+                alt="Maryam Mueen"
+                fill
+                priority
+                sizes="(max-width: 640px) 260px, (max-width: 1024px) 320px, 380px"
+                className="object-contain"
+              />
             </div>
-            <div className="absolute -bottom-4 -right-4 px-4 py-2 rounded-full glass border border-token text-xs font-semibold shadow-lg">
-              ✨ CS @ UET Lahore
+
+            <div className="relative -mt-6 z-10 rounded-2xl bg-elev border border-token shadow-2xl px-4 py-3 flex items-center gap-3">
+              <div className="h-10 w-10 rounded-lg bg-accent/10 border border-accent/25 flex items-center justify-center flex-none">
+                <GraduationIcon className="h-5 w-5 text-accent" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <div className="text-sm font-bold text-fg leading-tight">
+                  Maryam Mueen
+                </div>
+                <div className="text-[11px] text-muted mt-0.5 flex items-center gap-1.5">
+                  <span>CS Grad · UET Lahore</span>
+                </div>
+              </div>
+              <span className="text-[10px] font-semibold uppercase tracking-wider text-accent px-2 py-1 rounded-md bg-accent/10 border border-accent/20 whitespace-nowrap">
+                2026
+              </span>
             </div>
           </div>
         </div>
@@ -107,20 +134,3 @@ export function Hero() {
   );
 }
 
-function PhotoPlaceholder() {
-  return (
-    <div className="h-full w-full flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-brand-500/20 to-pink-500/20 text-muted">
-      <svg
-        className="h-16 w-16 opacity-40"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      >
-        <circle cx="12" cy="8" r="4" />
-        <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" />
-      </svg>
-      <span className="text-xs uppercase tracking-wider">Photo coming soon</span>
-    </div>
-  );
-}

@@ -6,20 +6,20 @@ export const profile = {
   email: "maryammueen1@gmail.com",
   phone: "+92 312 4933903",
   availability: "Open to On-Site · Remote · Hybrid",
-  linkedin: "#",
+  linkedin: "https://www.linkedin.com/in/maryam-mueen1/",
   github: "#",
   resumeUrl: "/Resume_Maryam.pdf",
-  photo: "/maryam.jpg",
-  photoAlt: "/maryam-alt.jpg",
+  photoHero: "/Prof_hero.png",
+  photoAbout: "/Prof_about.jpg",
 };
 
 export const about = {
-  bio: `I'm a final-year Computer Science student at the University of Engineering and Technology (UET), Lahore, graduating in 2026. My work sits at the intersection of web development, AI/ML, and information security — with hands-on experience in Django, Python, and cloud deployments on AWS and Vercel.`,
-  bio2: `I love turning complex problems into clean, working software. Whether it's fine-tuning an LLM for education, building an end-to-end encrypted chat app, or implementing every data structure in a chess engine from scratch, I enjoy the full journey — from idea to production.`,
+  bio: `I'm a Computer Science graduate from the University of Engineering and Technology (UET), Lahore. My work sits at the intersection of web development, AI/ML, and information security — with production experience in Django, Python, and cloud deployments on AWS and Vercel.`,
+  bio2: `I love turning complex problems into clean, working software. From fine-tuning an LLM for education, to building an end-to-end encrypted chat app, to implementing every data structure in a chess engine from scratch — I enjoy the full journey, from idea to production.`,
   highlights: [
     { value: "5+", label: "Projects Shipped" },
-    { value: "2+", label: "Years TA Experience" },
-    { value: "2026", label: "Expected Graduation" },
+    { value: "4", label: "Internships & TA Roles" },
+    { value: "2026", label: "CS Graduate" },
   ],
 };
 
@@ -230,7 +230,7 @@ export const education = {
   degree: "Bachelor of Computer Science",
   school: "University of Engineering and Technology (UET), Lahore",
   period: "2022 – 2026",
-  status: "Final Year",
+  status: "Graduated",
   focusAreas: [
     "Software Engineering",
     "AI / Machine Learning",
@@ -254,8 +254,8 @@ export const education = {
 export const whoAmI = {
   quickFacts: [
     { label: "Based in", value: "Lahore, Pakistan" },
-    { label: "Studying", value: "CS @ UET Lahore" },
-    { label: "Graduating", value: "2026" },
+    { label: "Studied", value: "CS @ UET Lahore" },
+    { label: "Graduated", value: "2026" },
     { label: "Focus", value: "Django · AI · Web" },
   ],
 };
